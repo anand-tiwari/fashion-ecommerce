@@ -1,0 +1,52 @@
+/* productList.jsx */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-gap: 1rem;
+    padding: 0 1rem;
+    grid-auto-rows: auto;
+}
+
+
+/* ProductInfo.jsx */
+
+.product_info__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.product_info__category {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.product_info__category .field-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.product_info__rating {
+    background-color: var(--green);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: var(--white);
+    border-radius: 12%;
+    padding: 0.5rem;
+}
+
+.txt-secondary {
+    color: var(--light-gray);
+}
+
+
+/* need to check other file before removing */
+
+.ml-sm {
+    margin-left: 0.5rem;
+}
