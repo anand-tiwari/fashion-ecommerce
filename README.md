@@ -7,7 +7,7 @@ In the project directory, you can run:
 ### Node
 
 ```
-Node version >=16
+Node version >=14
 ```
 
 ### App is deployed in netlify
