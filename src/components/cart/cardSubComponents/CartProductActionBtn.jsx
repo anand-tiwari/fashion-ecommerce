@@ -20,6 +20,7 @@ export default function CartProductActionBtn({ product }) {
             products: [{ productId: product.id, quantity: count }],
           },
         },
+        product,
       })
     );
   }

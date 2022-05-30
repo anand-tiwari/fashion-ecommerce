@@ -1,6 +1,7 @@
 import axios from "axios";
 import { serializeQueryParams } from "utils/";
 
+// token = eyJr389hbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 const productApi = "https://fakestoreapi.com/products";
 const productDetailApi = "https://fakestoreapi.com/products";
 

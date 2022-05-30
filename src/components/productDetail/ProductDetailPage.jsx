@@ -16,7 +16,11 @@ export default function ProductDetailPage() {
   const isLoading = useSelector((state) => state.product.isLoading);
 
   useEffect(() => {
-    dispatch(fetchSingleProduct({ queryParams: { productId } }));
+    dispatch(
+      fetchSingleProduct({
+        queryParams: { productId },
+      })
+    );
   }, [dispatch, productId]);
 
   return (

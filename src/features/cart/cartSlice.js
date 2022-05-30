@@ -6,13 +6,11 @@ const initialState = {
     isLoading: false,
     carts: [],
 };
-//eyJr389hbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 
 export const fetchCartProducts = createAsyncThunk(
     "cart/fetchCartProducts",
     async(action, { getState }) => {
         const response = await getCartProducts();
-        console.log("From fetchCartProducts async thunk:", { response });
         const reduxStore = getState();
         const products =
             action.products.length > 0 ?
@@ -27,11 +25,12 @@ export const fetchCartProducts = createAsyncThunk(
 
 export const addProductToCart = createAsyncThunk(
     "cart/addProductToCart",
-    async({ queryParams }, { getState }) => {
+    async({ queryParams, product }) => {
         const response = await addProductCart(queryParams);
-        console.log("From addProductToCart async thunk:", { response });
-        const reduxStore = getState();
-        return { response: response.data, products: reduxStore.product.products };
+        return {
+            response: response.data.products,
+            products: [product],
+        };
     }
 );
 

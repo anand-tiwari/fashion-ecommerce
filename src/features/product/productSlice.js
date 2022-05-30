@@ -12,15 +12,12 @@ const initialState = {
         total: 10,
         pageSize: 10,
     },
-    carts: [],
 };
-//eyJr389hbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 
 export const loadProducts = createAsyncThunk(
     "candidate/loadProducts",
     async(action, { dispatch }) => {
         const response = await fetchProducts(action.queryParams);
-        console.log("From loadProducts async thunk:", { response, action });
         dispatch(fetchCartProducts({ products: response.data }));
         return { apiResponse: response.data, request: action };
     }
@@ -30,18 +27,13 @@ export const fetchSingleProduct = createAsyncThunk(
     "candidate/fetchSingleProduct",
     async(action) => {
         const response = await fetchProductDetailProduct(action.queryParams);
-        console.log("From loadProducts async thunk:", { response });
         return { response: response.data };
     }
 );
 export const productSlice = createSlice({
     name: "product",
     initialState,
-    reducers: {
-        sortByField: (state, action) => {
-            //state.candidates = getUpdatedCandidates(state.candidates, action.payload);
-        },
-    },
+    reducers: {},
     extraReducers: {
         [loadProducts.pending]: (state) => {
             state.isProductListingLoading = true;
@@ -68,7 +60,5 @@ export const productSlice = createSlice({
         },
     },
 });
-
-export const { sortByField } = productSlice.actions;
 
 export default productSlice.reducer;

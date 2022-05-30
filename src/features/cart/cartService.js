@@ -21,13 +21,17 @@ export const updateCart = (productIds, carts, products) => {
             }
         });
 
-    // check if product is already in cart then update quantity
-    const res = cartData.map((product) => {
-        const found = carts.find((id) => product.id === id);
-        if (!!found) product.count = found.count;
-        return product;
-    });
+    /* when empty then return populated data */
+    if (carts.length === 0) return cartData;
 
-    console.log("updated cart result", res);
-    return res;
+    // check if product is already in cart then update quantity
+    const newProduct = cartData.filter((product) => {
+        const found = carts.find((cartProduct) => product.id === cartProduct.id);
+        if (!!found) {
+            found.count = product.count;
+            return false;
+        }
+        return true;
+    });
+    return [...newProduct, ...carts];
 };

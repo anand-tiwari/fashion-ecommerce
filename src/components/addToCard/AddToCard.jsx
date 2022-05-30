@@ -21,6 +21,7 @@ export default function AddToCard({ product }) {
             products: [{ productId: product.id, quantity: count }],
           },
         },
+        product,
       })
     );
   }
