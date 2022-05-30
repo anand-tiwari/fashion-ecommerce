@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### Node
+
+```
+Node version >=16
+```
+
 ### App is deployed in netlify
 
 [https://react-fashion.netlify.app/list](https://react-fashion.netlify.app/list)
