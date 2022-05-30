@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ProductInfo from "../../products/ProductInfo";
+import ProductInfo from "components/products/ProductInfo";
 
 export default function CartProductInfo({ product }) {
   return (

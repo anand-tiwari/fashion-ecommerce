@@ -1,14 +1,12 @@
-import EmptyCart from "./EmptyCart";
-import CartDetails from "./cardSubComponents/CartDetails";
-import CartPriceDetails from "./cardSubComponents/CartPriceDetails";
-
 import "./cart.css";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { fetchCartProducts } from "../../features/cart/cartSlice";
-import { loadProducts } from "../../features/product/productSlice";
+import { fetchCartProducts } from "features/cart/cartSlice";
+import { loadProducts } from "features/product/productSlice";
+import EmptyCart from "components/cart/EmptyCart";
+import CartDetails from "components/cart/cardSubComponents/CartDetails";
+import CartPriceDetails from "components/cart/cardSubComponents/CartPriceDetails";
 
 export default function Cart() {
   const dispatch = useDispatch();

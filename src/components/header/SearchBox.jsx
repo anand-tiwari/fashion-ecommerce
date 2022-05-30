@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
-import { constructRouteParams } from "../../utils";
+import { constructRouteParams } from "utils/";
 import "./Header.css";
 
 export default function SearchBox() {

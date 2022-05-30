@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
-import ProductInfo from "../products/ProductInfo";
+import ProductInfo from "components/products/ProductInfo";
 
 export default function ProductCard({ product }) {
   const pdpUrl = `/product/${product.id}`;

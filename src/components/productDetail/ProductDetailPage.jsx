@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { fetchSingleProduct } from "../../features/product/productSlice";
+import { fetchSingleProduct } from "features/product/productSlice";
 
 import "./ProductDetailPage.css";
-import AddToCard from "../addToCard/AddToCard";
-import ProductInfo from "../products/ProductInfo";
-import Loader from "../loader/Loader";
+import AddToCard from "components/addToCard/AddToCard";
+import ProductInfo from "components/products/ProductInfo";
+import Loader from "components/loader/Loader";
 
 export default function ProductDetailPage() {
   const dispatch = useDispatch();

@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchCartProducts } from "../cart/cartSlice";
+import { fetchCartProducts } from "features/cart/cartSlice";
 import { fetchProducts, fetchProductDetailProduct } from "./productAPI";
 
 const initialState = {

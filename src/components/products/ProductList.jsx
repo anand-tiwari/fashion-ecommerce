@@ -2,11 +2,11 @@ import "./ProductList.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { SEARCH_TERM } from "../../config";
-import { loadProducts } from "../../features/product/productSlice";
-import ProductCard from "../productCard/ProductCard";
-import Pagination from "../pagination/Pagination";
-import Loader from "../loader/Loader";
+import { SEARCH_TERM } from "config";
+import { loadProducts } from "features/product/productSlice";
+import ProductCard from "components/productCard/ProductCard";
+import Pagination from "components/pagination/Pagination";
+import Loader from "components/loader/Loader";
 
 import { useEffect } from "react";
 export default function ProductList() {

@@ -1,5 +1,5 @@
-import CartProductInfo from "./CartProductInfo";
-import CartProductActionBtn from "./CartProductActionBtn";
+import CartProductInfo from "components/cart/cardSubComponents/CartProductInfo";
+import CartProductActionBtn from "components/cart/cardSubComponents/CartProductActionBtn";
 
 export default function CartProduct({ product }) {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
-import ProductList from "./components/products/ProductList";
-import ProductDetailPage from "./components/productDetail/ProductDetailPage";
-import Cart from "./components/cart/Cart";
+import ProductList from "components/products/ProductList";
+import ProductDetailPage from "components/productDetail/ProductDetailPage";
+import Cart from "components/cart/Cart";
 
 import { Routes, Route, Navigate } from "react-router-dom";
-import Header from "./components/header/Header";
+import Header from "components/header/Header";
 
 function App() {
   return (

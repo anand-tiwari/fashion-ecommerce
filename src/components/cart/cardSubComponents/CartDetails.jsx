@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import CartProduct from "./CartProduct";
+import CartProduct from "components/cart/cardSubComponents/CartProduct";
 
 export default function CartDetails() {
   const carts = useSelector((state) => state.cart.carts);

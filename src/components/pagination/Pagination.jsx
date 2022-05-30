@@ -2,8 +2,8 @@ import "./Pagination.css";
 
 import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import { constructRouteParams } from "../../utils";
-import { PaginationConstant } from "../../config";
+import { constructRouteParams } from "utils/";
+import { PaginationConstant } from "config";
 
 export default function Pagination() {
   const [searchParams, setSearchParams] = useSearchParams();

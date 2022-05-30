@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addProductToCart } from "../../../features/cart/cartSlice";
+import { addProductToCart } from "features/cart/cartSlice";
 
 export default function CartProductActionBtn({ product }) {
   const [count, setCount] = useState(product.quantity);

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { serializeQueryParams } from "../../utils";
+import { serializeQueryParams } from "utils/";
 
 const productApi = "https://fakestoreapi.com/products";
 const productDetailApi = "https://fakestoreapi.com/products";
